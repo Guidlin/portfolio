@@ -1,0 +1,24 @@
+.syntax-func {
+    color: #C678BC;
+    font-weight:900;
+}
+
+.syntax-func-name {
+    color: #61AFEF;
+}
+
+.syntax-specialChar {
+    color: #ABB2BF;
+}
+
+.syntax-console {
+    color: #E5C07B;
+}
+
+.syntax-parenthesis2 {
+    color: #C678DD;
+}
+
+.syntax-text {
+    color: #98C379;
+}

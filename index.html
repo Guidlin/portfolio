@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elliot Cassidy - Professional Web Developer</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="syntaxhighlighting.css">
+
+    
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init("pi3gPtuppAzf-snw-");
+
+        window.onload = () => {
+            document.getElementById("contact-form").addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                        .then(() => {
+
+                        })
+                        .catch((error) => {
+                            alert(error);
+                        });
+            });
+        }  
+    </script>
+</head>
+<body class="prevent-preload">
+    <header>
+        <nav class="navbar-dropdown-container">
+            <img class="navbar-hamburger" src="icons/menu.svg" />
+            <div class="navbar-dropdown">
+                <a class="link" href="#about">About</a>
+                <a class="link" href="#projects">Projects</a>
+                <a class="link" href="#hire">Hire</a>
+                <a class="link" href="#contact">Contact</a>
+                <hr />
+                <div>
+                    <a href="https://github.com/guidlin"><img src="icons/github.svg" class="icon" /></a>
+                    <a href="https://instagram.com/guidlindev"><img src="icons/instagram.svg" class="icon" /></a>
+                    <a href="https://twitter.com/guidlindev"><img src="icons/twitter.svg" class="icon" /></a>
+                </div>
+                
+            </div>
+        </nav>
+        
+        <nav class="sections">
+            <a class="link" href="#about">About</a>
+            <a class="link" href="#projects">Projects</a>
+            <a class="link" href="#hire">Hire</a>
+            <a class="link" href="#contact">Contact</a>
+        </nav>
+        <h1 class="navbar-title">elliot.</h1>
+        <nav class="socials">
+            <a class="link" href="https://github.com/guidlin"><img src="icons/github.svg" class="icon" />GitHub</a>
+            <a class="link" href="https://instagram.com/guidlindev"><img src="icons/instagram.svg" class="icon" />Instagram</a>
+            <a class="link" href="https://twitter.com/guidlindev"><img src="icons/twitter.svg" class="icon" />Twitter</a>
+        </nav>
+        <span class="navbar-invisible"></span>
+    </header>
+    
+    <main>
+        <div id="titleContent">
+            <div id="titleCodeContainer">
+                <h1 id="titleCode"></h1>
+            </div>
+            <p style="margin-bottom: 30px;">Full-stack developer, programming enthusiast.</p>
+            <div>
+                <a id="titleButton" href="#hire">Hire me</a>
+            </div>
+        </div>
+    
+        <section>
+            <h2 id="about"> About me</h2>
+            <hr />
+            <div class="half-container">
+                <div id="about-text" class="half">
+                    <p> Seven years ago, my computer science teacher introduced me to programming. I was instantly hooked. The problem-solving aspect of programming enthralled me and I felt a sense of accomplishment when I finished a project. </p>
+                    <p> Now, I am a freelance developer. I have 3+ years experience in HTML, CSS and JavaScript and over an years experience in Go. To this day, I still love being challenged and seeing the results of my hard work. </p>
+                    <p> When I'm not programming I enjoy playing the piano and the violin and playing video games. </p>
+                </div>
+                <div id="experience-container" class="half">
+                    <h3> Experience </h3>
+                        <div class="experience-item">
+                            <img  src="img/html.svg"  />
+                            <p>3+ years experience</p>
+                        </div>
+                        <div class="experience-item">
+                            <img src="img/css.svg"  />
+                            <p>3+ years experience</p>
+                        </div>
+                        <div class="experience-item">
+                            <img src="img/javascript.svg"  />
+                            <p>3+ years experience</p>
+                        </div>
+                        <div class="experience-item">
+                            <img src="img/go.svg"  />
+                            <p>1+ years experience</p>
+                        </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2 id="projects">Projects</h2>
+            <hr />
+            <div id="projects-gallery">
+                
+                <div class="projects-gallery-item"> 
+                    <a class="projects-gallery-link" href="">
+                        <div class="projects-gallery-bg" style="background-image: url('img/projects/kanjikanja.png')"></div>
+                        <div>
+                            <h3>KanjiKanja</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="projects-gallery-item"> 
+                    <a class="projects-gallery-link" href="">
+                        <div class="projects-gallery-bg" style="background-image: url('img/projects/hotelwebsite.png')"></div>
+                        <div>
+                            <h3>Hotel website</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 id="hire">Hire me</h2>        
+            <hr />
+            <div id="fiverrButton-container">
+                <a id="fiverrButton" href="https://www.fiverr.com/guidlin"><img id="fiverrIcon" src="icons/fiverr.svg"/>View my Fiverr gigs</a>
+            </div>
+            <div id="hire-text">
+                <p>To hire me, please place an order via Fiverr. Fiverr provides a convenient platform for browsing my portfolio and service offerings. Once the order is placed, I will begin working on your project promptly.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 id="contact">Contact me</h2>
+            <hr />
+            <form id="contact-form">
+                <label for="name">Your name</label>
+                <input id="name" type="text" name="name" placeholder="Enter your name here" />
+                <label for="email">Your email address</label>
+                <input id="email" type="email" name="email" placeholder="Enter your email address here" />
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Enter your message here" name="message"></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p> Made by Elliot Cassidy, 2023 </p>
+        <p id="agpl-notice"> The source code of this website is made available under the <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNU AFFERO GENERAL PUBLIC LICENSE v3</a>.</p>
+    </footer>
+    
+    <!--<div id="email-success">
+        <p> Your message has been successfully sent! </p>
+    </div>-->
+    
+</body>
+<script src="index.js"></script>
+</html>
