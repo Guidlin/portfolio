@@ -21,11 +21,12 @@
 
                 emailjs.sendForm('contact_service', 'contact_form', this)
                         .then(() => {
-
                         })
                         .catch((error) => {
                             alert(error);
                         });
+                        
+                window.location.reload();
             });
         }  
     </script>
