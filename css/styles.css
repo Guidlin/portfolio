@@ -141,9 +141,6 @@ header {
 }
 
 @media (max-width: 1050px) {
-    .link {
-    }
-    
     .link:hover {
         display: none;
 
@@ -322,10 +319,6 @@ header {
 }
 
 /* Projects */
-
-#projects {
-    
-}
 
 #projects-gallery{
     display: grid;
